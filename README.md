@@ -29,3 +29,12 @@ Ao tentar buscar dados do banco de dados, você pode informar como quer que os m
 * `PDO::FETCH_NUM`: Retorna cada linha como um  *array* , onde a chave é o índice numérico da coluna, começando do 0, e o valor é o valor da coluna em si
 
 Para ver os demais modos de busca e ler com mais detalhes os explicados aqui, você pode conferir a documentação oficial do PHP: [**PDOStatement::fetch**](https://www.php.net/manual/en/pdostatement.fetch#refsect1-pdostatement.fetch-parameters).
+
+#### Aula-03:
+
+* O que é ***SQL Injection*** e como realizar esse ataque em nossa aplicação
+* Que adicionar parâmetros na *string* SQL é perigoso
+* A resolver esse problema, utilizando ***Prepared Statements***
+* Que *prepared statements* podem inclusive ajudar na performance da aplicação
+* As diferenças entre `bindValue` e `bindParam` para vincular parâmetros aos *prepared statements*
+* Que podemos informar o tipo de dado que estamos passando através do `PDO`, utilizando o terceiro parâmetro de `bindValue` e `bindParam`
