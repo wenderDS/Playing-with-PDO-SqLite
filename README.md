@@ -38,3 +38,17 @@ Para ver os demais modos de busca e ler com mais detalhes os explicados aqui, vo
 * Que *prepared statements* podem inclusive ajudar na performance da aplicação
 * As diferenças entre `bindValue` e `bindParam` para vincular parâmetros aos *prepared statements*
 * Que podemos informar o tipo de dado que estamos passando através do `PDO`, utilizando o terceiro parâmetro de `bindValue` e `bindParam`
+
+#### Aula-04:
+
+Além do padrão `Repository` que foi citado neste capítulo, existe também o padrão `DAO`.
+
+Segundo o livro `DDD in PHP`, a diferença é a seguinte:
+
+> The significant difference is that Repositories represent collections, while DAOs are closer to the database and are often far more table-centric.
+
+Basicamente, ambos servem o mesmo propósito, mas a diferença é na interface deles, ou seja, em termos práticos, nos nomes dos métodos.
+
+Enquanto DAOs vão ter métodos como `get`, `create`, `update` e `delete`, lembrando ações que realizamos em tabelas de um banco de dados, Repositories vão possuir métodos como `all`, `findById`, `add`, `remove`, tratando os dados como uma coleção.
+
+Eu opto sempre por utilizar Repositories para que eles continuem fazendo sentido caso eu esteja persistindo dados em algum lugar que não seja um banco de dados (API, arquivo, sistema externo, etc)
