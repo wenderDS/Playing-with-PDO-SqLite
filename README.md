@@ -41,6 +41,15 @@ Para ver os demais modos de busca e ler com mais detalhes os explicados aqui, vo
 
 #### Aula-04:
 
+* As boas práticas e padrões de projeto com orientação a objetos
+* O padrão ***Entity*** e vimos que ele já está sendo aplicado em nosso projeto
+* O padrão  ***Creation Method*** , que cria uma conexão, de forma que não precisemos repetir esse código pela aplicação
+* O padrão  ***Repository*** , que permite extrair a lógica de persistência para uma classe específica
+* A abstrair a implementação de um  *repository* , através de uma interface, para podermos trocar a implementação no futuro, caso seja necessário
+* O conceito de injeção de dependências e suas diversas vantagens no desenvolvimento
+
+
+
 Além do padrão `Repository` que foi citado neste capítulo, existe também o padrão `DAO`.
 
 Segundo o livro `DDD in PHP`, a diferença é a seguinte:
