@@ -3,21 +3,17 @@
 require_once "./vendor/autoload.php";
 
 use Alura\Pdo\Domain\Model\Student;
-
-$databasePath = __DIR__ . "/database.sqlite";
-$pdo = new PDO("sqlite:$databasePath");
+use Alura\Pdo\Infrastructure\Repository\PdoStudentRepository;
 
 $student = new Student(
     id: null,
-    name: "Papaléguas Blindão",
-    birthDate: new DateTimeImmutable('1983-03-25')
+    name: "Jubileu Bonaparte",
+    birthDate: new DateTimeImmutable('1993-02-28')
 );
 
-$sqlInsert = "INSERT INTO students (name, birth_date) VALUES (:name, :birth_date);";
-$statement = $pdo->prepare($sqlInsert);
-$statement->bindValue(':name', $student->name());
-$statement->bindValue(':birth_date', $student->birthDate()->format('Y-m-d'));
+$studentRepository = new PdoStudentRepository();
+$result = $studentRepository->save($student);
 
-if ($statement->execute()) {
+if ($result) {
     echo "Student Included!";
 }

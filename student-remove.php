@@ -2,13 +2,17 @@
 
 require_once "./vendor/autoload.php";
 
-$databasePath = __DIR__ . "/database.sqlite";
-$pdo = new PDO("sqlite:$databasePath");
+use Alura\Pdo\Domain\Model\Student;
+use Alura\Pdo\Infrastructure\Repository\PdoStudentRepository;
 
-$sqlStudentDelete = "DELETE FROM students WHERE id = :id;";
-$statement = $pdo->prepare($sqlStudentDelete);
-$statement->bindValue(':id', 2, PDO::PARAM_INT);
-$result = $statement->execute();
+$student = new Student(
+    id: 4,
+    name: "Jubileu Bonaparte",
+    birthDate: new DateTimeImmutable('1993-02-28')
+);
+
+$studentRepository = new PdoStudentRepository();
+$result = $studentRepository->remove($student);
 
 if ($result) {
     echo "Student removed!";
