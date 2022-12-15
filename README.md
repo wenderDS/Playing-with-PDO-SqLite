@@ -48,8 +48,6 @@ Para ver os demais modos de busca e ler com mais detalhes os explicados aqui, vo
 * A abstrair a implementação de um  *repository* , através de uma interface, para podermos trocar a implementação no futuro, caso seja necessário
 * O conceito de injeção de dependências e suas diversas vantagens no desenvolvimento
 
-
-
 Além do padrão `Repository` que foi citado neste capítulo, existe também o padrão `DAO`.
 
 Segundo o livro `DDD in PHP`, a diferença é a seguinte:
@@ -61,3 +59,11 @@ Basicamente, ambos servem o mesmo propósito, mas a diferença é na interface d
 Enquanto DAOs vão ter métodos como `get`, `create`, `update` e `delete`, lembrando ações que realizamos em tabelas de um banco de dados, Repositories vão possuir métodos como `all`, `findById`, `add`, `remove`, tratando os dados como uma coleção.
 
 Eu opto sempre por utilizar Repositories para que eles continuem fazendo sentido caso eu esteja persistindo dados em algum lugar que não seja um banco de dados (API, arquivo, sistema externo, etc)
+
+
+
+#### Aula-05:
+
+* Que o `PDO` nos fornece uma API muito simples para gerenciar transações
+* Como iniciar e finalizar uma transação, com `beginTransaction` e `commit`
+* Que é possível "cancelar" uma transação, com o método `rollBack`
