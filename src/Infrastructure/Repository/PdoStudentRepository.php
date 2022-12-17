@@ -9,6 +9,7 @@ use DateTimeInterface;
 use Exception;
 use PDO;
 use PDOStatement;
+use RuntimeException;
 
 class PdoStudentRepository implements StudentRepository
 {
@@ -54,7 +55,7 @@ class PdoStudentRepository implements StudentRepository
 
     private function insert(Student $student): bool
     {
-        $sqlInsert = 'INSERT INTO students (name, birth_date) VALUES (:name, :birth_date);';
+        $sqlInsert = "INSERT INTO students (name, birth_date) VALUES (:name, :birth_date);";
         $statement = $this->connection->prepare($sqlInsert);
 
         $result = $statement->execute([
