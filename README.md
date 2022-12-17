@@ -14,10 +14,10 @@
 * Que o método exec retorna apenas o número de linhas afetadas, e não o resultado de uma query em si
 * A buscar dados no banco, utilizando o método query
 * Os diversos métodos para recuperar dados utilizando o PDO:
-  * fetch
-  * fetchObject
-  * fetchColumn
-  * fetchAll
+    * fetch
+    * fetchObject
+    * fetchColumn
+    * fetchAll
 * Os diferentes Fetch Modes do PHP, ou seja, as diferentes formas de trazer dados do banco para o PHP
 
 Ao tentar buscar dados do banco de dados, você pode informar como quer que os métodos do `PDO` formatem esses dados pra você. Os principais *fetch modes* ou *fetch styles* são:
