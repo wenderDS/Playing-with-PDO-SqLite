@@ -60,10 +60,16 @@ Enquanto DAOs vão ter métodos como `get`, `create`, `update` e `delete`, lembr
 
 Eu opto sempre por utilizar Repositories para que eles continuem fazendo sentido caso eu esteja persistindo dados em algum lugar que não seja um banco de dados (API, arquivo, sistema externo, etc)
 
-
-
 #### Aula-05:
 
 * Que o `PDO` nos fornece uma API muito simples para gerenciar transações
 * Como iniciar e finalizar uma transação, com `beginTransaction` e `commit`
 * Que é possível "cancelar" uma transação, com o método `rollBack`
+
+#### Aula-06:
+
+* A importância de tratar erros em nossa aplicação
+* Que, por padrão, o `PDO` não emite nenhum tipo de erro
+* A recuperar as informações de erro através do método `errorInfo`
+* Como informar ao `PDO` para lançar exceções em casos de erro
+* Outros atributos para configurar a conexão com o banco utilizando `PDO`
