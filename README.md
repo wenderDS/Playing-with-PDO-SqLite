@@ -14,10 +14,10 @@
 * Que o método exec retorna apenas o número de linhas afetadas, e não o resultado de uma query em si
 * A buscar dados no banco, utilizando o método query
 * Os diversos métodos para recuperar dados utilizando o PDO:
-    * fetch
-    * fetchObject
-    * fetchColumn
-    * fetchAll
+  * fetch
+  * fetchObject
+  * fetchColumn
+  * fetchAll
 * Os diferentes Fetch Modes do PHP, ou seja, as diferentes formas de trazer dados do banco para o PHP
 
 Ao tentar buscar dados do banco de dados, você pode informar como quer que os métodos do `PDO` formatem esses dados pra você. Os principais *fetch modes* ou *fetch styles* são:
@@ -73,3 +73,14 @@ Eu opto sempre por utilizar Repositories para que eles continuem fazendo sentido
 * A recuperar as informações de erro através do método `errorInfo`
 * Como informar ao `PDO` para lançar exceções em casos de erro
 * Outros atributos para configurar a conexão com o banco utilizando `PDO`
+
+
+#### Aula-07:
+
+* A relacionar dados do banco de dados em nossa aplicação orientada a objetos
+* O padrão  ***Aggregate*** , onde o acesso a objetos é controlado por outros objetos (acesso a `Telefone` controlado por `Aluno`)
+* O problema  **N + 1** , que é um grande inimigo da performance
+* Como resolver o problema de N + 1 *queries*
+* Que há diferenças entre o mundo relacional (banco de dados) e o mundo orientado a objetos (aplicação)
+* Que ORMs podem nos ajudar no mapeamento entre esses dois mundos
+* Como é fácil migrar de sistema de banco de dados, utilizando `PDO`
